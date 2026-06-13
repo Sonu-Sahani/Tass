@@ -1,91 +1,210 @@
 # 🃏 Card Game Tracker
 
-Track balances, transfers & who owes whom — works on mobile & desktop.
+Track balances, transfers, and settlements during card games. Works seamlessly on both mobile and desktop devices.
 
 ---
 
-## 🖥️ VS Code mein Run Karna (Local)
+## ✨ Features
 
-### Step 1 — Prerequisites Install Karo
-- [Node.js](https://nodejs.org/) download karo (LTS version, e.g. v20)
-- Install karne ke baad terminal mein check karo:
-  ```
-  node -v
-  npm -v
-  ```
+- ✅ Supports 2–15 players
+- ✅ Track player balances in real-time
+- ✅ Transfer money between players
+- ✅ Transaction history for each player
+- ✅ Automatic debt settlement calculation
+- ✅ Data persistence using Local Storage
+- ✅ JSON Export / Import support
+- ✅ Mobile-friendly responsive UI
+- ✅ Works offline after loading
+- ✅ Reset game functionality
 
-### Step 2 — Project Open Karo VS Code Mein
-1. VS Code open karo
-2. `File → Open Folder` → `card-game-tracker` folder select karo
+---
 
-### Step 3 — Dependencies Install Karo
-VS Code ka integrated terminal open karo (`Ctrl + `` ` ``) aur likho:
+## 🛠️ Tech Stack
+
+- React
+- Vite
+- Tailwind CSS
+- Local Storage API
+
+---
+
+## 📂 Project Setup
+
+### Prerequisites
+
+Make sure you have the following installed:
+
+- Node.js (v18 or higher recommended)
+- npm
+
+Check installation:
+
+```bash
+node -v
+npm -v
+```
+
+---
+
+## 🚀 Run Locally
+
+### 1. Clone the Repository
+
+```bash
+git clone https://github.com/YOUR_USERNAME/card-game-tracker.git
+```
+
+### 2. Navigate to Project Folder
+
+```bash
+cd card-game-tracker
+```
+
+### 3. Install Dependencies
+
 ```bash
 npm install
 ```
-Yeh sab packages download karega (node_modules folder banega).
 
-### Step 4 — Dev Server Start Karo
+### 4. Start Development Server
+
 ```bash
 npm run dev
 ```
-Browser mein khulega: **http://localhost:5173**
 
-### Step 5 — Build Karna (Optional)
-Production build banana ho toh:
+The application will start at:
+
+```text
+http://localhost:5173
+```
+
+---
+
+## 📦 Build for Production
+
+Create an optimized production build:
+
 ```bash
 npm run build
 ```
-`dist/` folder mein final files aayengi.
 
----
+The build files will be generated inside:
 
-## 🚀 Vercel Pe Deploy Karna
+```text
+dist/
+```
 
-### Method 1 — GitHub se (Recommended)
-
-1. **GitHub account** banao agar nahi hai — https://github.com
-2. **New repository** banao:
-   - GitHub pe `+` → `New repository`
-   - Name: `card-game-tracker`
-   - Public ya Private — dono kaam karega
-3. **Code upload karo** (terminal mein):
-   ```bash
-   git init
-   git add .
-   git commit -m "Initial commit"
-   git branch -M main
-   git remote add origin https://github.com/YOUR_USERNAME/card-game-tracker.git
-   git push -u origin main
-   ```
-4. **Vercel** pe jao — https://vercel.com
-5. **Sign up / Login** karo (GitHub se login karo)
-6. **"Add New Project"** click karo
-7. **GitHub repo select karo** — `card-game-tracker`
-8. Settings mein kuch change karne ki zarurat nahi, Vercel automatic detect karega:
-   - Framework: **Vite**
-   - Build Command: `npm run build`
-   - Output Directory: `dist`
-9. **"Deploy"** button dabao
-10. 1-2 minute mein live ho jayega! URL milega jaise: `https://card-game-tracker-xyz.vercel.app`
-
-### Method 2 — Vercel CLI se (Direct)
+Preview the production build:
 
 ```bash
-npm install -g vercel
-vercel login
-vercel --prod
+npm run preview
 ```
 
 ---
 
-## 📱 Features
+## 🌐 Deploy on Vercel
 
-- ✅ 2–15 players support
-- ✅ Transfer money between players
-- ✅ Transaction history
-- ✅ Auto debt settlement at game end
-- ✅ **Reset button** — page refresh pe reset nahi hota (localStorage use karta hai)
-- ✅ JSON export/import
-- ✅ Mobile friendly
-- ✅ Data browser close karne ke baad bhi saved rehta hai
+### Method 1: Deploy via GitHub (Recommended)
+
+1. Create a GitHub repository.
+2. Push your project to GitHub.
+
+```bash
+git init
+git add .
+git commit -m "Initial commit"
+git branch -M main
+git remote add origin https://github.com/YOUR_USERNAME/card-game-tracker.git
+git push -u origin main
+```
+
+3. Login to Vercel:
+   https://vercel.com
+
+4. Click **Add New Project**
+
+5. Import your GitHub repository.
+
+6. Use the following settings:
+
+```text
+Framework Preset: Vite
+Build Command: npm run build
+Output Directory: dist
+Install Command: npm install
+```
+
+7. Click **Deploy**
+
+Your project will be live in a few minutes.
+
+---
+
+## 🌐 Deploy on Netlify
+
+### Build the Project
+
+```bash
+npm run build
+```
+
+### Deploy
+
+1. Login to https://app.netlify.com
+2. Click **Add New Site**
+3. Choose **Deploy Manually**
+4. Drag and drop the **dist** folder
+
+Or connect your GitHub repository and use:
+
+```text
+Build Command: npm run build
+Publish Directory: dist
+```
+
+---
+
+## 📱 How It Works
+
+### Setup
+
+- Select the number of players
+- Enter player names
+- Start the game
+
+### During the Game
+
+- Adjust balances
+- Transfer money between players
+- Track transaction history
+- Export or import game data using JSON
+
+### End Game
+
+- View final standings
+- Automatically calculate who owes whom
+- Reset and start a new game
+
+---
+
+## 💾 Data Persistence
+
+All game data is automatically saved in the browser using Local Storage.
+
+This means:
+
+- Refreshing the page won't lose data
+- Closing and reopening the browser won't lose data
+- No backend or database required
+
+---
+
+## 📄 License
+
+This project is open-source and available under the MIT License.
+
+---
+
+## 👨‍💻 Author
+
+Developed with React, Vite, and Tailwind CSS.
